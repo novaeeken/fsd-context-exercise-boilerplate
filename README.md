@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` and `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,57 +12,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+## Opdracht beschrijving
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Maak een LightProvider.js bestand aan
+2. Creeer in dit bestand een LightContext met `createContext`
+3. Creer daarna een leeg LightProvider component
+4. Zorg dat onderaan het bestand zowel de LightProvider en de LightContext worden geexporteert
+5. Zorg dat het LightProvider component het volgende doet:
+    - dit component moet de property `children` kunnen ontvangen
+    - dit component geeft als return value een `<LightContext.Provider>` element terug waarin de children gerenderd worden
+6. Maak in dit component een stukje state aan waarin we de waarde van het licht (aan/uit => true/false) op kunnen slaan: `lightStatus`
+7. Geef `lightStatus` mee aan de `<LightContext.Provider>` zodat hij voor andere componenten beschikbaar wordt
+8. Geef ook de setter functie van `lightStatus` mee
+9. Importeer de LightProvider in App.js en wikkel hem om de componenten
+10. Implementeer de LightContext in LightSwitch.js door daar een context te creeren met `createContext` en de setter functie in de OnClick te gebruiken
+11. Implementeer de LightContext in Status.js door daar een context te creeren met `createContext` en de `lightStatus` te gebruiken om het woordt 'Aan' en 'Uit' conditioneel te renderen
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
