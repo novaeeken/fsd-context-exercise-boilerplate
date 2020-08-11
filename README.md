@@ -25,6 +25,6 @@ You will also see any lint errors in the console.
 7. Geef `lightStatus` mee aan de `<LightContext.Provider>` zodat hij voor andere componenten beschikbaar wordt
 8. Geef ook de setter functie van `lightStatus` mee
 9. Importeer de LightProvider in App.js en wikkel hem om de componenten
-10. Implementeer de LightContext in LightSwitch.js door daar een context te creeren met `createContext` en de setter functie in de OnClick te gebruiken
-11. Implementeer de LightContext in Status.js door daar een context te creeren met `createContext` en de `lightStatus` te gebruiken om het woordt 'Aan' en 'Uit' conditioneel te renderen
+10. Implementeer de LightContext in LightSwitch.js door daar een context te gebruiken met `useContext` en de setter functie in de OnClick te gebruiken
+11. Implementeer de LightContext in Status.js door daar een context te gebruiken met `useContext` en de `lightStatus` te gebruiken om het woord 'Aan' en 'Uit' conditioneel te renderen
 
